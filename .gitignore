@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.local
+.env.production
+.env.development
+
+# Node.js / React
+node_modules/
+dist/
+build/
+.eslintcache
+*.log
+
+# Project specific
+reports/trend_report_*.md
+.DS_Store
+Thumbs.db
