@@ -26,8 +26,8 @@ export default function TrendDashboard() {
 
   useEffect(() => {
     // 실시간 SSE(Server-Sent Events) 연결 수립
-    // 백엔드의 FastAPI/Express 엔드포인트 URL에 매핑합니다.
-    const eventSource = new EventSource('http://localhost:8000/api/trends/stream');
+    const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const eventSource = new EventSource(`${apiBaseUrl}/api/trends/stream`);
 
     eventSource.onopen = () => {
       setIsConnected(true);
